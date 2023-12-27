@@ -1,5 +1,3 @@
-
-
 // .loader {
 //   position: fixed;
 //   opacity: 0;
@@ -98,14 +96,12 @@
   border-right: 5px solid $secondary-color;
   border-bottom: 10px solid $tertiary-color;
   width: 120px;
-  height: 120px;
-  -webkit-animation: spin 350ms ease-in-out infinite;
-  animation: spin 350ms ease-in-out infinite;
-  animation-duration: 350ms;
-
-  margin:auto;
-inset: 0;
-  position:fixed;
+  height: 40px;
+  -webkit-animation: spin 350ms ease 5;
+  animation: spin 350ms ease 5;
+  margin: auto;
+  inset: 0;
+  position: fixed;
   z-index: 9999;
   opacity: 0;
 }
@@ -119,12 +115,12 @@ inset: 0;
 
   100% {
     -webkit-transform: rotate(360deg);
-    opacity: 1;
+    opacity: 0.2;
   }
 
   75% {
     -webkit-transform: rotate(0deg);
-    opacity: 1;
+    opacity: 0.5;
   }
 
   25% {
@@ -152,12 +148,12 @@ inset: 0;
 
   100% {
     -webkit-transform: rotate(360deg);
-    opacity: 1;
+    opacity: 0.2;
   }
 
   75% {
     -webkit-transform: rotate(0deg);
-    opacity: 1;
+    opacity: 0.5;
   }
 
   25% {
