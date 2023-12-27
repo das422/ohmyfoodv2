@@ -1,0 +1,226 @@
+@import './base/base';
+@import './base/reset';
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/functions';
+@import './layout/header';
+@import './layout/footer';
+@import './components/btn.scss';
+@import './components/icon.scss';
+@import './components/new.scss';
+@import '../SASS/page/restaurants';
+@import './utils/responsive';
+@import './utils/animation';
+@import './components/loader';
+
+//hero//
+/*hero*/
+.hero {
+    @include flex-center;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-block: 3rem;
+    text-align: center;
+    margin-inline: clamp(0.3rem, 1.5vw, 2rem);
+
+    .hero__title {
+        margin-inline-start: 2.5rem;
+        margin-inline-end: 3.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .hero__subtitle {
+        margin-bottom: 2rem;
+        font-weight: 300;
+    }
+}
+
+
+//fonctionnement
+/*fonctionnement*/
+.notice {
+    margin-block: 2rem;
+    margin-inline: clamp(0.8rem, -4.7321rem + 14.2857vw, 11.125rem);
+    background-color: #fff;
+    position: relative;
+
+}
+
+.bg{
+    background-color:#fff;
+    padding-block: 1rem;
+
+}
+
+.notice_layout {
+    @include flex-center;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.notice__title{
+    margin-bottom: 1.2rem;
+}
+
+.notice-step__text {
+    font-weight: 500;
+}
+
+.notice-btn {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.8rem;
+    width: 100%;
+    position: relative;
+
+    .notice-step__nbr {
+        @include circle-step;
+    }
+}
+
+.btn-container {
+    margin: 0 auto;
+}
+
+
+@include media_min-width($medium) {
+    .notice {
+
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .notice_layout {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+
+            .notice__title {
+                grid-column: 1;
+                margin-bottom: 2rem;
+
+            }
+
+        }
+
+        .notice-btn {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 0.8rem;
+
+
+            .notice-step__nbr {
+                @include circle-step;
+            }
+        }
+    }
+}
+
+
+//restaurant//
+/*restaurant*/
+
+.restaurant_container {
+
+    padding-inline: clamp(1.125rem, -4.7321rem + 14.2857vw, 11.125rem);
+    margin-block: 3rem;
+
+    .card-restaurant {
+        @include box-style;
+        @include shadow-bx;
+        width: auto;
+        border: none;
+        position: relative;
+        cursor: pointer;
+
+        .img {
+            border: none;
+            height: min(124px, 231px);
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+        }
+    }
+
+    .card-restaurant__content {
+        @include flex-center;
+        justify-content: space-between;
+        gap: 0.8rem;
+        padding-inline: toRem(12);
+        margin-bottom: toRem(12);
+
+        .heart {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+    }
+
+    .card-restaurant__main-title {
+        margin-bottom: 1.2rem;
+
+    }
+
+    .card_restaurant__subtitle {
+        font-weight: 300;
+    }
+
+    @include media_min-width($medium) {
+
+        .restaurant_main {
+            display: grid;
+            flex-direction: column;
+            row-gap: 1.2rem;
+            grid-template-columns: auto auto 6rem;
+
+
+            .card-restaurant__main-title {
+                grid-column: 1;
+
+            }
+
+            .card1 {
+                grid-column: 1 / span 2;
+            }
+
+            .card2 {
+                grid-column: 4 / span 2;
+            }
+
+            .card3 {
+                grid-column: 1 / span 2;
+            }
+
+            .card4 {
+                grid-column: 4 / span 2;
+            }
+        }
+
+    }
+
+}
+
+@include media_min-width($medium) {
+
+    .footer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: baseline;
+        gap: 2rem;
+
+        .footer__list {
+            flex-direction: row;
+            gap: 0.8rem;
+
+            .footer__list--item {
+                width: max-content;
+
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+
+.footer {
+
+
+    @include flex-center;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px 25px;
+    background-color: #353535;
+    color: white;
+    box-sizing: border-box;
+    gap: toRem(5);
+
+    .logo-text {
+        font-family: $font-title;
+        font-weight: 400;
+
+    }
+
+    .footer__list {
+        padding: toRem(5);
+        gap: toRem(5);
+        @include flex-center;
+        align-items: flex-start;
+        flex-direction: column;
+
+        .footer__list--item {
+            gap: toRem(7);
+        }
+
+
+
+        .footer__list--item {
+            @include flex-center;
+        }
+    }
+}
+

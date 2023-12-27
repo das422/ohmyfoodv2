@@ -1,0 +1,98 @@
+.arrow::before {
+  font: var(--fa-font-solid);
+  content: "\f060";
+  font-weight: 900;
+  font-size: 30px;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.location-dot::before {
+  font: var(--fa-font-solid);
+  content: "\f3c5";
+  font-weight: 900;
+  font-size: 20px;
+
+}
+
+
+.mobile-screen::before {
+  font: var(--fa-font-solid);
+  content: "\f3cd";
+  font-weight: 900;
+  font-size: 16px;
+
+}
+
+.list--ul::before {
+  font: var(--fa-font-solid);
+  content: "\f0ca";
+  font-weight: 900;
+  font-size: 16px;
+
+}
+
+.store::before {
+  font: var(--fa-font-solid);
+  content: "\f54e";
+  font-weight: 900;
+  font-size: 16px;
+
+}
+
+.handshake::before {
+  font: var(--fa-font-solid);
+  content: "\f4c4";
+  font-weight: 900;
+  font-size: 13px;
+
+}
+
+
+
+
+//heart
+.heart i {
+  font-size: 1.5rem;
+  top: 3px;
+  left: 3px;
+  position: absolute;
+}
+
+.heart .fa-solid {
+  content: "";
+  position: absolute;
+  color: transparent;
+  background-image: $gradient-color;
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0;
+  cursor: pointer;
+  transition: ease-in 2s;
+
+}
+
+.heart .fa-solid:hover {
+  opacity: 1;
+
+  & :hover:active {
+    opacity: 1;
+  }
+}
+
+.checkbox::after {
+  content: '\f058';
+  font: var(--fa-font-solid);
+  position: absolute;
+  font-size: 1.5rem;
+  color: white;
+  width: 10px;
+  top: 50%;
+  left: 50%;
+  margin-left: -12px;
+  margin-top: -12px;
+  width: fit-content;
+}
+
+

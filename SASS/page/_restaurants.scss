@@ -1,0 +1,131 @@
+.img_container {
+    height: clamp(275px, 15vw, 1200px);
+    overflow: hidden;
+
+    .img-restaurant {
+        object-position: 55% 61%;
+    }
+}
+
+.main-content {
+    display: grid;    
+    position: relative;
+    background-color: #e6e3e3;
+    width: min(100%, 1066px);    
+    @include box-style;
+    padding: 1rem;
+    margin: 0 auto;
+    gap: 40px;
+    border: none;
+    border-radius: 3rem;
+    transform: translateY(-3rem);
+
+    .main_title--layout {
+        position: relative;
+        @include flex-center;
+        gap: 2rem;
+    }
+
+    .heart {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .dish-container {
+        display: grid;
+        gap: 12px;
+
+        .course-title{
+            font-weight: 300;
+        }
+
+        .green-bar {
+            display: block;
+            background-color: $tertiary-color;            
+            height: 5px;
+            width: clamp(4rem, 3vw, 5rem);
+        }
+    }
+
+
+    .dish-card {
+        @include box-style;
+        @include shadow-bx;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        overflow-x: hidden;
+
+    }
+
+    .dish__content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        padding-inline: 0.8rem;
+        margin-bottom: 0.8rem;
+        margin-inline: 0.2rem;
+        margin-block: 0.8rem;
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow-x: hidden;
+
+        .card-restaurant__icon {
+            @include flex-center;
+
+        }
+
+        .dish__text {
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+        }
+
+    }
+
+    .dish__title {
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+    }
+
+    .dish__subtitle {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-weight: 300;
+    }
+
+    .check {
+        display: flex;
+        align-items: flex-end;
+        margin-inline-end: -4rem;
+        gap: 1rem;
+
+        .price {
+            padding-block: 0.8rem;
+            font-weight: 500;
+        }
+
+        .checkbox {
+            background-color: $tertiary-color;
+            height: 100%;
+            position: relative;
+            width: 4rem;
+
+
+        }
+
+
+    }
+
+    .check:hover {
+        margin-inline: 0rem;
+    }
+}
+

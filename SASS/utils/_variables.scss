@@ -1,0 +1,26 @@
+//font
+$font-size-base:16px;
+$font-title: 'shrikhand',cursive;
+$font-txt:'Roboto',sans serif;
+
+$background:#EAEAEA;
+
+
+//color-main
+$primary-color:#9356DC;
+$secondary-color:#FF79DA;
+$tertiary-color:#99E2D0;
+
+//color-main-light
+$primary-color-light:lighten($primary-color, 5%);
+$secondary-color-light:lighten($secondary-color, 5%);
+
+
+//color-gradient
+$gradient-color: linear-gradient(to bottom, $secondary-color, $primary-color 80%);
+$gradient-color-light: linear-gradient(to bottom, $secondary-color-light, $primary-color-light 80%);
+
+
+
+
+
