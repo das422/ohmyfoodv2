@@ -1,6 +1,6 @@
-.appear{
-    -webkit-animation: fade 2500ms ease-in-out;
-    animation: fade 2500ms ease-in-out;
+.appear {
+    -webkit-animation: fade 2500ms linear;
+    animation: fade 2500ms linear;
     animation-iteration-count: 1;
 
 }
@@ -23,8 +23,8 @@
 //menu-card appear(restaurant-page)
 .slide-down {
 
-    -webkit-animation: fade 1500ms ease-in-out forwards;
-    animation: fade 1500ms ease-in-out forwards;
+    -webkit-animation: fade 1500ms linear forwards;
+    animation: fade 1500ms linear forwards;
     animation-iteration-count: 1;
     transform-origin: left;
 
@@ -51,18 +51,21 @@
 }
 
 /*check-btn*/
-.check:hover {
-    -webkit-animation: slide-rtl 0.4s ease-in-out;
-    animation: slide-rtl 0.4s ease-in-out;
+
+
+
+.dish-card:hover>.check {
+    -webkit-animation: slide-rtl 300ms linear forwards;
+    animation: slide-rtl 300ms linear forwards;
 
     @keyframes slide-rtl {
         0% {
-            margin-inline-end: -4rem;
+            transform: translateX(0rem);
 
         }
 
         100% {
-            margin-inline-end: 0rem;
+            transform: translateX(-4rem);
 
         }
     }
@@ -70,12 +73,12 @@
 
 @-webkit-keyframes slide-rtl {
     0% {
-        margin-inline-end: -4rem;
+        transform: translateX(0rem);
 
     }
 
     100% {
-        margin-inline-end: 0rem;
+        transform: translateX(-4rem);
 
     }
 
@@ -83,30 +86,30 @@
 }
 
 .checkbox:hover::after {
-    -webkit-animation: rotate 0.4s linear;
-    animation: rotate 0.4s linear;
+    -webkit-animation: rotate 300ms linear forwards;
+    animation: rotate 300ms linear forwards;
 }
 
 @-webkit-keyframes rotate {
     0% {
 
-        transform: rotate(180deg);
+        transform: rotate(360deg);
     }
 
     100% {
 
-        transform: rotate(0deg);
+        transform: rotate(360deg);
     }
 }
 
 @keyframes rotate {
     0% {
 
-        transform: rotate(180deg);
+        transform: rotate(0deg);
     }
 
     100% {
 
-        transform: rotate(0deg);
+        transform: rotate(360deg);
     }
 }
