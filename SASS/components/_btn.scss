@@ -1,0 +1,60 @@
+.btn {
+    @include shadow-bx;
+    background: $gradient-color;
+    border-radius: 3rem;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+        background: $gradient-color-light;
+        transition: 1s;
+        transform: scale(102%);
+    }
+
+    .btn-txt {
+        margin: 1rem;
+        font-weight: 500;
+
+    }
+
+
+}
+
+.btn2 {
+
+    @include shadow-bx;
+    background-color: $background;
+    height: 4.6rem;
+    border-radius: 1.2rem;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background: $gradient-color-light;
+        transition: linear 0.5s;
+        transform: scale(102%);
+
+    }
+
+    &:hover {
+        color: white;
+
+    }
+
+
+    .btn-txt {
+        margin-inline: 1rem;
+
+    }
+
+
+}
+
+.btn_layout {
+    @include flex-center;
+
+    .btn3 {
+        padding-inline: 1rem;
+    }
+
+}
